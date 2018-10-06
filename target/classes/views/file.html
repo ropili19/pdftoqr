@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PDF to QR</title>
+   
+	<!-- font Lato -->
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
+	<!-- Header stylesheets -->
+	<link href="../assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+	<link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="../assets/css/core.min.css" rel="stylesheet" type="text/css">
+	<link href="../assets/css/icons/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
+	<link href="../assets/css/cr.css" rel="stylesheet" type="text/css">
+	<link href="../assets/css/cr_core.css" rel="stylesheet" type="text/css">
+	<link href="../assets/css/components.css" rel="stylesheet" type="text/css">
+	<link href="../assets/css/colors.css" rel="stylesheet" type="text/css">
+	<link href="../assets/css/cr_colors.css" rel="stylesheet" type="text/css">
+	<link href="../assets/css/cr_button.css" rel="stylesheet" type="text/css">
+	<link href="../assets/css/cr_alert.css" rel="stylesheet" type="text/css">
+	<link href="../assets/css/micss.css" rel="stylesheet" type="text/css">
+
+	<!-- /Header stylesheets -->
+	<!-- Header JS files -->
+    	<script type="text/javascript" src="../assets/js/core/libraries/jquery.min.js"></script>
+    	<script type="text/javascript" src="../assets/js/core/libraries/bootstrap.min.js"></script>
+    	<script type="text/javascript" src="../assets/js/core/cr.js"></script>
+    	<script type="text/javascript" src="../assets/js/plugins/loaders/pace.min.js"></script>
+    	<script type="text/javascript" src="../assets/js/plugins/loaders/blockui.min.js"></script>
+    	<script type="text/javascript" src="../assets/js/plugins/ui/nicescroll.min.js"></script>
+    	<script type="text/javascript" src="../assets/js/plugins/ui/drilldown.js"></script>
+    	<script type="text/javascript" src="../assets/js/core/cr_fileinput.min.js"></script>
+    	<script type="text/javascript" src="../assets/js/core/app.js"></script>
+    	<script type="text/javascript" src="../assets/js/pages/uploader_bootstrap.js"></script>
+	<!-- Header JS files -->
+</head>
+
+<body onload="active_menu_item('extensiones', 'subir_archivos')">
+	<!-- Content Style files -->
+   
+	<!-- /second navbar -->
+<script type="text/javascript">
+	var exampleImages = '../assets/images/';
+	var uploadUrl = '/getMultimedias';
+</script>
+
+<div class="container">
+<div class="navbar navbar-inverse">
+		<!-- container Main Navbar-->
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand logo_desktop" href="../prueba"><img src="../assets/img/gif1.gif" alt=""></a>
+				<!-- logo para version movil -->
+				<a class="navbar-brand logo_mobile" href="../prueba"><img src="../assets/img/gif1.gif" alt=""></a>
+				<span class="title_mobile">PDF to QR </span>
+				
+			</div>
+	
+			<div class="navbar-collapse collapse" id="navbar-mobile">
+				<div class="row">
+				    <div class="navbar-text">PDF to QR</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- / container Main Navbar-->
+	</div>
+
+	<!-- Page container -->
+	<div class="page-container">
+
+		<!-- Page content -->
+		<div class="page-content">
+
+			<!-- Main content -->
+			<div class="content-wrapper">
+
+				<!-- Bootstrap file input -->
+				<div class="panel panel-flat">
+					<div class="panel-heading">
+						<h3 class="panel-title">Bienvenid@ </h3>
+						<div class="heading-elements">
+							<ul class="icons-list">
+								<li><a data-action="collapse"></a></li>
+								<li><a data-action="reload"></a></li>
+								<!-- <li><a data-action="close"></a></li> -->
+							</ul>
+						</div>
+					</div>
+
+					<div class="panel-body">
+						<p class="text-muted">Por favor suba un fichero <code>PDF</code> para que sea procesado incorporando un código QR por cada video Multimedia. </p><br>
+
+						<form class="form-horizontal" id="form1" name="form1"  enctype="multipart/form-data">
+							<div class="form-group">
+								<label class="col-lg-2 control-label text-semibold">Subir fichero:</label>
+								<div class="col-lg-10">
+									<input type="file" class="file-input" id="file" accept="aplication/pdf">
+									<span class="help-block">Al finalizar el proceso el nuevo fichero PDF solo estará accesible durante las próximas <code>3 horas</code>.</span>
+								</div>
+							</div>
+
+						
+
+							
+						</form>
+					</div>
+				</div>
+				<!-- /bootstrap file input -->
+			<div class="alert alert-danger alert-styled-left alert-bordered">
+			<button type="button" class="close" data-dismiss="alert"><span>x</span><span class="sr-only">close</span></button>
+			<span class="text-semibold">El documento recibido no contiene elementos multimedia</span>
+			</div>
+			</div>
+			<!-- /main content -->
+
+		</div>
+		<!-- /page content -->
+
+	</div>
+
+</div>	
+	<footer>
+		<div class="text-center">
+			&copy;Realizado por Rosario del Pilar Orbezo Pastrana.
+		</div>
+	</footer>
+	
+</body>
+<script type="text/javascript">
+$('#file').click(function(){
+	  $('#result').html('');
+	 
+	  var oMyForm = new FormData();
+	  oMyForm.append("file", file.files[0]);
+	  fich=oMyForm;
+	 var indiceVideo=1;
+	  $.ajax({
+	    url: 'http://localhost:8444/procesa',
+	    data: oMyForm,
+	    dataType: 'json',
+	    processData: false,
+	    contentType: false,
+	    type: 'POST',
+	    beforeSend: function(data) {
+	    	$("#mensaje").val("loading");
+			    $.ajax({
+			    url: 'http://localhost:8444/getMultimedias',
+			    data: oMyForm,
+			    dataType: 'json',
+			    processData: false,
+			    contentType: false,
+			    type: 'POST',
+	       		success: function(data){
+	       				var form2=$("#form2");
+	       				$(form2).append('<div class="alert alert-warning">Se han encontrado videos sin url, por favor introdusca las urls para poder continuar');
+	       				//$(form2).append( '<div class="row"><div class="col-sm-2" style="background-color:lavender;">Página</div><div class="col-sm-2" style="background-color:lavenderblush;">Nombre</div><div class="col-sm-2" style="background-color:lavender;">Url</div></div>');
+	       				$.each(data, function(i, item) {
+	    					console.log(item);
+	    					if(item.urlVideo==null){
+	    					$(form2).append('<input type="hidden" name="id" value="'+indiceVideo+'">');
+	    					 $(form2).append(
+	    					 '<fieldset><div class="form-group"><label>Pagina:</label><input type="text" id="pagina'+indiceVideo+'" name="pagina'+indiceVideo+'" value='+item.page+' size="2"></div></fieldset><fieldset><div class="form-group"><label>Nombre del video:</label><input type="text" id="namevideo'+indiceVideo+'"  name="nameVideo'+indiceVideo+'" value='+item.nameVideo+' ></div></fieldset><div class="form-group"><label>url del video:</label><input type="text" id="url'+indiceVideo+'" name="url'+indiceVideo+'" required autofocus></div> ');
+	    					
+	    					}
+	    					indiceVideo+=1;
+	    				});
+	    				$(form2).append('<div><input type="button" id="Enviar" class="btn btn-info" onclick="guardarUrl();"value="Enviar"></div></div>');
+	    				
+					}
+					,
+	                error: function (data, status, er) {
+	                    alert("error: " + data + " status: " + status + " er:" + er);
+	                }
+					});
+	       				
+	     
+	    },
+	    success: function(data){
+	    alert(("#form2").serialize());
+	     alert(data);
+	      
+	    }
+	  });
+	  });
+</script>
+</html>

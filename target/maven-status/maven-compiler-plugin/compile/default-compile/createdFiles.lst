@@ -1,0 +1,9 @@
+META-INF\spring-configuration-metadata.json
+com\pdftoqr\pdftoqr\exceptions\FileUploadException.class
+com\pdftoqr\pdftoqr\model\UploadFileResponse.class
+com\pdftoqr\pdftoqr\model\Multimedia.class
+com\pdftoqr\pdftoqr\service\OperacionesFichero.class
+com\pdftoqr\config\PDFuploadProperties.class
+com\pdftoqr\pdftoqr\exceptions\FileNotFoundException.class
+com\pdftoqr\pdftoqr\controller\PDFController.class
+com\pdftoqr\pdftoqr\PdftoqrApplication.class

@@ -1,0 +1,148 @@
+.label-default{border-color:#999;background-color:#999}
+.label-default[href]:focus,.label-default[href]:hover{background-color:#999}
+
+.label-primary{border-color:#E1261C;background-color: #E1261C; }
+.label-primary[href]:focus,.label-primary[href]:hover{background-color:#E1261C}
+
+.label-success{border-color:#4CAF50;background-color:#4CAF50}
+.label-success[href]:focus,.label-success[href]:hover{background-color:#4CAF50}
+
+.label-info{border-color:#00BCD4;background-color:#00BCD4}
+.label-info[href]:focus,.label-info[href]:hover{background-color:#00BCD4}
+
+.label-warning{border-color:#E2AE1A;background-color:#E2AE1A}
+.label-warning[href]:focus,.label-warning[href]:hover{background-color:#E2AE1A}
+
+.label-danger {border-color:#FF5722;background-color:#FF5722}
+.label-danger[href]:focus,.label-danger[href]:hover{background-color:#FF5722}
+
+.label-striped{background-color:#f5f5f5;color:#333;border-left-width:2px;padding:5px 10px}
+.label-striped.label-striped-right{border-left-width:1px;border-right-width:2px}
+.label-striped[href]:focus,.label-striped[href]:hover{color:#333;background-color:#eee;-webkit-box-shadow:none;box-shadow:none}
+
+.badge-default{background-color:#999;border-color:#999}
+.badge-primary{background-color:#E1261C;border-color:#E1261C}
+.badge-success{background-color:#4CAF50;border-color:#4CAF50}
+.badge-info{background-color:#00BCD4;border-color:#00BCD4}
+.badge-warning{background-color:#E2AE1A;border-color:#E2AE1A}
+.badge-danger{background-color:#FF5722;border-color:#FF5722}
+.badge-flat{background-color:transparent;border-width:2px}
+
+
+/*** styles form steps  ***/
+
+.wizard > .steps > ul > li.current .number {
+    border-color: #E1261C;
+    color: #E1261C;
+}
+
+.wizard > .steps > ul > li.done .number {
+    background-color: #E1261C;
+    border-color: #E1261C;
+}
+
+.wizard > .actions > ul > li > a {
+    background: #E1261C;
+    color: #fff;
+}
+
+
+.wizard > .steps > ul > li:before, 
+.wizard > .steps > ul > li:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 43px;
+    width: 50%;
+    height: 2px;
+    background-color: #E1261C;
+    z-index: 9;
+}
+
+.wizard > .actions > ul > li.disabled > a[href="#previous"], 
+.wizard > .actions > ul > li.disabled > a[href="#previous"]:hover,
+.wizard > .actions > ul > li.disabled > a[href="#previous"]:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: #fff;
+    color: #333;
+}
+
+.wizard > .actions > ul > li > a[href="#previous"] {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #333;
+}
+
+/*** end styles form steps  ***/
+
+.bootstrap-switch-handle-on.bootstrap-switch-primary, 
+.bootstrap-switch-handle-off.bootstrap-switch-primary {
+    color: #fff;
+    background-color: #E1261C;
+}
+
+.bootstrap-switch-handle-on.bootstrap-switch-info, 
+.bootstrap-switch-handle-off.bootstrap-switch-info {
+    color: #fff;
+    background-color: #00BCD4;
+}
+
+
+.bootstrap-switch-handle-on.bootstrap-switch-success, 
+.bootstrap-switch-handle-off.bootstrap-switch-success {
+    color: #fff;
+    background-color: #4CAF50;
+}
+
+
+.bootstrap-switch-handle-on.bootstrap-switch-danger, 
+.bootstrap-switch-handle-off.bootstrap-switch-danger {
+    color: #fff;
+    background-color: #FF5722;
+}
+
+.bootstrap-switch-handle-on.bootstrap-switch-warning, 
+.bootstrap-switch-handle-off.bootstrap-switch-warning {
+    color: #fff;
+    background-color: #E2AE1A;
+}
+
+
+
+
+.editable-click, a.editable-click, .editable-click:hover, a.editable-click:hover {
+    border-bottom: 1px dashed #E1261C;
+}
+
+
+a.editable-empty, a.editable-empty:hover, a.editable-empty:focus {
+    border-bottom-color: #FF5722;
+}
+
+.fc-event {
+    position: relative;
+    display: block;
+    border: 1px solid #E1261C;
+    background-color: #E1261C;
+    font-weight: normal;
+    border-radius: 2px;
+}
+
+
+.dataTables_paginate .paginate_button.current, 
+.dataTables_paginate .paginate_button.current:hover, 
+.dataTables_paginate .paginate_button.current:focus {
+    background-color: #E1261C;
+}
+
+
+.paging_simple .paginate_button:hover,
+.paging_simple .paginate_button:focus {
+  background-color: #E1261C;
+}
+
+.dataTable tbody > tr.selected, .dataTable tbody > tr > .selected {
+    background-color: #E1261C;
+    color: #FFF;
+}

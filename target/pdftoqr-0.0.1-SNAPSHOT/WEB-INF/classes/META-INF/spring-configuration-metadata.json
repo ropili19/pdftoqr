@@ -1,0 +1,17 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.pdftoqr.config.PDFuploadProperties",
+      "name": "file",
+      "type": "com.pdftoqr.config.PDFuploadProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.pdftoqr.config.PDFuploadProperties",
+      "name": "file.upload-dir",
+      "type": "java.lang.String"
+    }
+  ]
+}

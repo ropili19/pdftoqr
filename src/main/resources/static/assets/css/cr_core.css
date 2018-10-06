@@ -1,0 +1,604 @@
+h1{
+    font-size: 22px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color:#333;
+}
+h2{
+    font-size: 22px;
+    font-weight: 500;+
+    color: #333;
+}
+h3{
+    font-size: 21px;
+    font-weight: 500;
+    color: #333;
+}
+h4{
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #999;
+}
+h5{
+    font-size: 17px;
+    font-weight: 500;
+    color: #333;
+}
+h6{
+    font-size: 16px;
+    font-weight:400;
+    color: #333;
+}
+
+h1, h2, h3 {
+    margin-top: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 0;
+}
+
+a {
+  color: #BB2017;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #961913;
+  text-decoration: none;
+}
+/*a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}*/
+
+a.bg-primary:focus, a.bg-primary:hover {
+    background-color: #E1261C;
+}
+
+a.bg-info:focus, a.bg-info:hover {
+    background-color: #00BCD4;
+}
+
+a.bg-success:focus, a.bg-success:hover {
+    background-color: #4CAF50;
+}
+
+a.bg-danger:focus, a.bg-danger:hover {
+    background-color: #FF5722;
+}
+
+a.bg-warning:focus, a.bg-warning:hover {
+    background-color: #E2AE1A;
+}
+
+
+
+table {
+  border:0px;
+}
+
+.table-borderless > tbody > tr > td,
+.table-borderless > tbody > tr > th {
+  border: 0;
+}
+.table-columned > tbody > tr > td,
+.table-columned > tfoot > tr > td,
+.table-columned > tbody > tr > th,
+.table-columned > tfoot > tr > th {
+  border: 0;
+  border-left: 1px solid #ddd;
+}
+.table-columned > tbody > tr > td:first-child,
+.table-columned > tfoot > tr > td:first-child,
+.table-columned > tbody > tr > th:first-child,
+.table-columned > tfoot > tr > th:first-child {
+  border-left: 0;
+}
+.table-columned > thead > tr > th,
+.table-columned > thead > tr > td {
+  border-left: 1px solid #ddd;
+}
+.table-columned > thead > tr > th:first-child,
+.table-columned > thead > tr > td:first-child {
+  border-left: 0;
+}
+.table-xlg > thead > tr > th,
+.table-xlg > tbody > tr > th,
+.table-xlg > tfoot > tr > th,
+.table-xlg > thead > tr > td,
+.table-xlg > tbody > tr > td,
+.table-xlg > tfoot > tr > td {
+  padding: 20px;
+}
+.table-lg > thead > tr > th,
+.table-lg > tbody > tr > th,
+.table-lg > tfoot > tr > th,
+.table-lg > thead > tr > td,
+.table-lg > tbody > tr > td,
+.table-lg > tfoot > tr > td {
+  padding: 15px 20px;
+}
+.table-sm > thead > tr > th,
+.table-sm > tbody > tr > th,
+.table-sm > tfoot > tr > th,
+.table-sm > thead > tr > td,
+.table-sm > tbody > tr > td,
+.table-sm > tfoot > tr > td {
+  padding: 10px 20px;
+}
+.table-xs > thead > tr > th,
+.table-xs > tbody > tr > th,
+.table-xs > tfoot > tr > th,
+.table-xs > thead > tr > td,
+.table-xs > tbody > tr > td,
+.table-xs > tfoot > tr > td {
+  padding: 8px 20px;
+}
+.table-xxs > thead > tr > th,
+.table-xxs > tbody > tr > th,
+.table-xxs > tfoot > tr > th,
+.table-xxs > thead > tr > td,
+.table-xxs > tbody > tr > td,
+.table-xxs > tfoot > tr > td {
+  padding: 6px 15px;
+}
+.table-bordered tr:first-child > td,
+.table-bordered tr:first-child > th {
+  border-top-color: #bbb;
+}
+.table-bordered tr[class*=bg-] > th,
+.table-bordered tr[class*=bg-] > td,
+.table-bordered tr > th[class*=bg-],
+.table-bordered tr > td[class*=bg-] {
+  border-color: #fff;
+}
+.panel[class*=bg-] .table-striped > tbody > tr:nth-child(odd),
+.table-striped[class*=bg-] > tbody > tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.table-hover > tbody > tr:hover > th,
+.table-hover > tbody > tr:hover > td {
+  background-color: inherit;
+}
+.panel[class*=bg-] .table-hover > tbody > tr:hover,
+.table-hover[class*=bg-] > tbody > tr:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.panel[class*=bg-] .panel-body > .table .active > th,
+.panel[class*=bg-] .panel-body > .table-responsive > .table .active > th,
+.table[class*=bg-] .active > th,
+.panel[class*=bg-] .panel-body > .table .active > td,
+.panel[class*=bg-] .panel-body > .table-responsive > .table .active > td,
+.table[class*=bg-] .active > td,
+.panel[class*=bg-] .panel-body > .table th.active,
+.panel[class*=bg-] .panel-body > .table-responsive > .table th.active,
+.table[class*=bg-] th.active,
+.panel[class*=bg-] .panel-body > .table td.active,
+.panel[class*=bg-] .panel-body > .table-responsive > .table td.active,
+.table[class*=bg-] td.active {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+
+footer {
+    background-color: #e1261c;
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    /*bottom: 0; */
+    margin-bottom: 0; /* With content empty, this line stay comment this line, and uncomment previous line */
+    vertical-align: bottom;
+}
+
+footer div {
+    color:#FFF;
+    padding:5px;
+    width: 100%;
+    font-weight: 400;
+}
+
+button a {
+    color: #FFF;
+}
+
+button a:hover {
+    color: #FFF;
+}
+
+pre {
+    padding: 5px;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+line-height: 1.2 !important;
+}
+
+
+.glyphs > div:hover {
+  background-color: #E1261C !important;
+  color: #fff;
+  border-radius: 2px;
+}
+
+.dropdown-menu>.dropdown-submenu.active>a {
+    background-color: #E1261C;
+    color: #fff;
+}
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    background-color: #E1261C;
+}
+
+.dropdown-menu>.active>label, .dropdown-menu>.active>label:focus, .dropdown-menu>.active>label:hover {
+    color: #fff;
+    outline: 0;
+    background-color: #E1261C;
+}
+
+
+
+
+.menu-info>.active>a, .menu-info>.active>a:focus, .menu-info>.active>a:hover {
+    background-color: #00BCD4 !important;
+}
+.menu-success>.active>a, .menu-success>.active>a:focus, .menu-success>.active>a:hover {
+    background-color: #4CAF50 !important;
+}
+.menu-warning>.active>a, .menu-warning>.active>a:focus, .menu-warning>.active>a:hover {
+    background-color: #E2AE1A !important;
+}
+.menu-danger>.active>a, .menu-danger>.active>a:focus, .menu-danger>.active>a:hover {
+    background-color: #FF5722 !important;
+}
+
+.menu-pink>.active>a, .menu-pink>.active>a:focus, .menu-pink>.active>a:hover {
+    background-color: #E91E63 !important;
+}
+
+.menu-violet>.active>a, .menu-violet>.active>a:focus, .menu-violet>.active>a:hover {
+    background-color: #9C27B0 !important;
+}
+
+.menu-purple>.active>a, .menu-purple>.active>a:focus, .menu-purple>.active>a:hover {
+    background-color: #673AB7 !important;
+}
+
+.menu-indigo>.active>a, .menu-indigo>.active>a:focus, .menu-indigo>.active>a:hover {
+    background-color: #3F51B5 !important;
+}
+
+.menu-blue>.active>a, .menu-blue>.active>a:focus, .menu-blue>.active>a:hover {
+    background-color: #03A9F4 !important;
+}
+
+.menu-teal>.active>a, .menu-teal>.active>a:focus, .menu-teal>.active>a:hover {
+    background-color: #009688 !important;
+}
+
+.menu-green>.active>a, .menu-green>.active>a:focus, .menu-green>.active>a:hover {
+    background-color: #8BC34A  !important;
+}
+
+.menu-orange>.active>a, .menu-orange>.active>a:focus, .menu-orange>.active>a:hover {
+    background-color: #FF9800  !important;
+}
+
+.menu-brown>.active>a, .menu-brown>.active>a:focus, .menu-brown>.active>a:hover {
+    background-color: #795548  !important;
+}
+
+.menu-grey>.active>a, .menu-grey>.active>a:focus, .menu-grey>.active>a:hover {
+    background-color: #777777  !important;
+}
+
+.menu-slate>.active>a, .menu-slate>.active>a:focus, .menu-slate>.active>a:hover {
+    background-color: #607D8B  !important;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    z-index: 3;
+    color: #fff;
+    background-color: #E1261C;
+    border-color: #E1261C;
+    cursor: default;
+}
+
+.pager-linked li>a, .pager-linked li>span {
+    border-color: transparent;
+    color: #E1261C;
+}
+
+.pager-linked li>a:hover, .pager-linked li>span:hover {
+    background-color: #E1261C;
+    border-color: #E1261C;
+    color: #fff;
+}
+
+
+.pager li>a:focus, .pager li>a:hover {
+    border-color: #E1261C;
+    color: #fff;
+}
+
+.pager li>a:focus, .pager li>a:hover {
+    text-decoration: none;
+    background-color: #E1261C;
+}
+
+
+
+.espacio-superior{
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.espacio-inferior{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+
+.borde-superior{
+    border-top: solid 1px #ddd;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.borde-inferior{
+    border-bottom: solid 1px #ddd;
+    padding-bottom: 5px;
+}
+
+
+@media (min-width: 769px){
+  .nav-tabs.nav-tabs-highlight>li.active>a, 
+  .nav-tabs.nav-tabs-highlight>li.active>a:focus, 
+  .nav-tabs.nav-tabs-highlight>li.active>a:hover {
+      border-top-color: #E1261C;
+  }
+}
+
+
+.nav-tabs.nav-tabs-primary>li.active>a, 
+.nav-tabs.nav-tabs-primary>li.active>a:focus, 
+.nav-tabs.nav-tabs-primary>li.active>a:hover {
+    border-top-color: #E1261C;
+    border-top-width: 2px;
+}
+
+.nav-tabs.nav-tabs-info>li.active>a, 
+.nav-tabs.nav-tabs-info>li.active>a:focus, 
+.nav-tabs.nav-tabs-info>li.active>a:hover {
+    border-top-color: #00BCD4;
+    border-top-width: 2px;
+}
+
+.nav-tabs.nav-tabs-success>li.active>a, 
+.nav-tabs.nav-tabs-success>li.active>a:focus, 
+.nav-tabs.nav-tabs-success>li.active>a:hover {
+    border-top-color: #4CAF50;
+    border-top-width: 2px;
+}
+
+.nav-tabs.nav-tabs-warning>li.active>a, 
+.nav-tabs.nav-tabs-warning>li.active>a:focus, 
+.nav-tabs.nav-tabs-warning>li.active>a:hover {
+    border-top-color: #E2AE1A;
+    border-top-width: 2px;
+}
+
+.nav-tabs.nav-tabs-danger>li.active>a, 
+.nav-tabs.nav-tabs-danger>li.active>a:focus, 
+.nav-tabs.nav-tabs-danger>li.active>a:hover {
+    border-top-color: #FF5722;
+    border-top-width: 2px;
+}
+
+.nav-tabs.nav-tabs-pink>li.active>a, 
+.nav-tabs.nav-tabs-pink>li.active>a:focus, 
+.nav-tabs.nav-tabs-pink>li.active>a:hover {
+    border-top-color: #E91E63;
+    border-top-width: 2px;
+}
+
+.nav-tabs.nav-tabs-violet>li.active>a, 
+.nav-tabs.nav-tabs-violet>li.active>a:focus, 
+.nav-tabs.nav-tabs-violet>li.active>a:hover {
+    border-top-color: #9C27B0;
+    border-top-width: 2px;
+}
+
+.nav-tabs.nav-tabs-purple>li.active>a, 
+.nav-tabs.nav-tabs-purple>li.active>a:focus, 
+.nav-tabs.nav-tabs-purple>li.active>a:hover {
+    border-top-color: #673AB7;
+    border-top-width: 2px;
+}
+
+.nav-tabs.nav-tabs-indigo>li.active>a, 
+.nav-tabs.nav-tabs-indigo>li.active>a:focus, 
+.nav-tabs.nav-tabs-indigo>li.active>a:hover {
+    border-top-color: #3F51B5;
+    border-top-width: 2px;
+}
+
+.nav-tabs.nav-tabs-blue>li.active>a, 
+.nav-tabs.nav-tabs-blue>li.active>a:focus, 
+.nav-tabs.nav-tabs-blue>li.active>a:hover {
+    border-top-color: #03A9F4;
+    border-top-width: 2px;
+}
+
+.nav-tabs.nav-tabs-teal>li.active>a, 
+.nav-tabs.nav-tabs-teal>li.active>a:focus, 
+.nav-tabs.nav-tabs-teal>li.active>a:hover {
+    border-top-color: #009688;
+    border-top-width: 2px;
+}
+
+.nav-tabs.nav-tabs-green>li.active>a, 
+.nav-tabs.nav-tabs-green>li.active>a:focus, 
+.nav-tabs.nav-tabs-green>li.active>a:hover {
+    border-top-color: #8BC34A;
+    border-top-width: 2px;
+}
+
+.nav-tabs.nav-tabs-orange>li.active>a, 
+.nav-tabs.nav-tabs-orange>li.active>a:focus, 
+.nav-tabs.nav-tabs-orange>li.active>a:hover {
+    border-top-color: #FF9800;
+    border-top-width: 2px;
+}
+
+.nav-tabs.nav-tabs-brown>li.active>a, 
+.nav-tabs.nav-tabs-brown>li.active>a:focus, 
+.nav-tabs.nav-tabs-brown>li.active>a:hover {
+    border-top-color: #795548;
+    border-top-width: 2px;
+}
+
+.nav-tabs.nav-tabs-grey>li.active>a, 
+.nav-tabs.nav-tabs-grey>li.active>a:focus, 
+.nav-tabs.nav-tabs-grey>li.active>a:hover {
+    border-top-color: #777777;
+    border-top-width: 2px;
+}
+
+.nav-tabs.nav-tabs-slate>li.active>a, 
+.nav-tabs.nav-tabs-slate>li.active>a:focus, 
+.nav-tabs.nav-tabs-slate>li.active>a:hover {
+    border-top-color: #607D8B;
+    border-top-width: 2px;
+}
+
+.nav-tabs.nav-tabs-info-bottom>li.active>a, 
+.nav-tabs.nav-tabs-info-bottom>li.active>a:focus, 
+.nav-tabs.nav-tabs-info-bottom>li.active>a:hover {
+    border-color: transparent transparent #00BCD4;
+    border-bottom-width: 1px;
+}
+
+.nav-tabs.nav-tabs-success-bottom>li.active>a, 
+.nav-tabs.nav-tabs-success-bottom>li.active>a:focus, 
+.nav-tabs.nav-tabs-success-bottom>li.active>a:hover {
+    border-color: transparent transparent #4CAF50;
+    border-bottom-width: 1px;
+}
+
+.nav-tabs.nav-tabs-warning-bottom>li.active>a, 
+.nav-tabs.nav-tabs-warning-bottom>li.active>a:focus, 
+.nav-tabs.nav-tabs-warning-bottom>li.active>a:hover {
+    border-color: transparent transparent #E2AE1A;
+    border-bottom-width: 1px;
+}
+
+.nav-tabs.nav-tabs-danger-bottom>li.active>a, 
+.nav-tabs.nav-tabs-danger-bottom>li.active>a:focus, 
+.nav-tabs.nav-tabs-danger-bottom>li.active>a:hover {
+    border-color: transparent transparent #FF5722;
+    border-bottom-width: 1px;
+}
+
+.nav-tabs.nav-tabs-pink-bottom>li.active>a, 
+.nav-tabs.nav-tabs-pink-bottom>li.active>a:focus, 
+.nav-tabs.nav-tabs-pink-bottom>li.active>a:hover {
+    border-color: transparent transparent #E91E63;
+    border-bottom-width: 1px;
+}
+
+.nav-tabs.nav-tabs-violet-bottom>li.active>a, 
+.nav-tabs.nav-tabs-violet-bottom>li.active>a:focus, 
+.nav-tabs.nav-tabs-violet-bottom>li.active>a:hover {
+    border-color: transparent transparent #9C27B0;
+    border-bottom-width: 1px;
+}
+
+.nav-tabs.nav-tabs-purple-bottom>li.active>a, 
+.nav-tabs.nav-tabs-purple-bottom>li.active>a:focus, 
+.nav-tabs.nav-tabs-purple-bottom>li.active>a:hover {
+    border-color: transparent transparent #673AB7;
+    border-bottom-width: 1px;
+}
+
+.nav-tabs.nav-tabs-indigo-bottom>li.active>a, 
+.nav-tabs.nav-tabs-indigo-bottom>li.active>a:focus, 
+.nav-tabs.nav-tabs-indigo-bottom>li.active>a:hover {
+    border-color: transparent transparent #3F51B5;
+    border-bottom-width: 1px;
+}
+
+.nav-tabs.nav-tabs-blue-bottom>li.active>a, 
+.nav-tabs.nav-tabs-blue-bottom>li.active>a:focus, 
+.nav-tabs.nav-tabs-blue-bottom>li.active>a:hover {
+    border-color: transparent transparent #03A9F4;
+    border-bottom-width: 1px;
+}
+
+.nav-tabs.nav-tabs-teal-bottom>li.active>a, 
+.nav-tabs.nav-tabs-teal-bottom>li.active>a:focus, 
+.nav-tabs.nav-tabs-teal-bottom>li.active>a:hover {
+    border-color: transparent transparent #009688;
+    border-bottom-width: 1px;
+}
+
+.nav-tabs.nav-tabs-green-bottom>li.active>a, 
+.nav-tabs.nav-tabs-green-bottom>li.active>a:focus, 
+.nav-tabs.nav-tabs-green-bottom>li.active>a:hover {
+    border-color: transparent transparent #8BC34A;
+    border-bottom-width: 1px;
+}
+
+.nav-tabs.nav-tabs-orange-bottom>li.active>a, 
+.nav-tabs.nav-tabs-orange-bottom>li.active>a:focus, 
+.nav-tabs.nav-tabs-orange-bottom>li.active>a:hover {
+    border-color: transparent transparent #FF9800;
+    border-bottom-width: 1px;
+}
+
+.nav-tabs.nav-tabs-brown-bottom>li.active>a, 
+.nav-tabs.nav-tabs-brown-bottom>li.active>a:focus, 
+.nav-tabs.nav-tabs-brown-bottom>li.active>a:hover {
+    border-color: transparent transparent #795548;
+    border-bottom-width: 1px;
+}
+
+.nav-tabs.nav-tabs-grey-bottom>li.active>a, 
+.nav-tabs.nav-tabs-grey-bottom>li.active>a:focus, 
+.nav-tabs.nav-tabs-grey-bottom>li.active>a:hover {
+    border-color: transparent transparent #777777;
+    border-bottom-width: 1px;
+}
+
+.nav-tabs.nav-tabs-slate-bottom>li.active>a, 
+.nav-tabs.nav-tabs-slate-bottom>li.active>a:focus, 
+.nav-tabs.nav-tabs-slate-bottom>li.active>a:hover {
+    border-color: transparent transparent #607D8B;
+    border-bottom-width: 1px;
+}
+
+.nav-tabs.nav-tabs-bottom>li.active>a, 
+.nav-tabs.nav-tabs-bottom>li.active>a:focus, 
+.nav-tabs.nav-tabs-bottom>li.active>a:hover {
+    border-color: transparent transparent #E1261C;
+    border-bottom-width: 1px;
+}
+
+
+@media (max-width: 768px){
+  .nav-tabs>li.active>a, 
+  .nav-tabs>li.active>a:focus, 
+  .nav-tabs>li.active>a:hover {
+      border-width: 0 0 0 2px;
+      border-left-color: #E1261C;
+      background-color: #f5f5f5;
+  }
+}
+
+/*.validation-error-label, .validation-valid-label {
+    color: #E1261C !important;
+}*/
