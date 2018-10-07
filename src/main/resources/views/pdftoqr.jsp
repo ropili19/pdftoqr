@@ -47,7 +47,7 @@
 	<!-- /second navbar -->
 <script type="text/javascript">
 	var exampleImages = '../assets/images/';
-	var uploadUrl = '/getMultimedias';
+	var uploadUrl = '../getMultimedias';
 </script>
 
 <div class="container">
@@ -100,7 +100,7 @@
 									<div class="panel-body">
 						<p class="text-muted">Por favor suba un fichero <code>PDF</code> para que sea procesado incorporando un c&oacute;digo QR por cada video Multimedia. </p><br>
 
-						<form class="form-horizontal" id="form1" name="form1" action="/getMultimedias" method="POST" enctype="multipart/form-data">
+						<form class="form-horizontal" id="form1" name="form1" action="../getMultimedias" method="POST" enctype="multipart/form-data">
 							<div class="form-group">
 								<label class="col-lg-2 control-label text-semibold">Subir fichero:</label>
 								<div class="col-lg-10">
@@ -249,7 +249,7 @@ function guardarUrl(){
 		 $.ajax(
             {
                 type: "POST",
-                url:   "/procesa",
+                url:   "../procesa",
                 data: form,
                 contentType: false,
                 processData: false,
@@ -274,7 +274,7 @@ function guardarUrl(){
 	 			            if (isConfirm) {
 	 			            	
 	 			            	 var req = new XMLHttpRequest();
-	 			            	  req.open("GET", "/downloadFile/"+namefile, true);
+	 			            	  req.open("GET", "../downloadFile/"+namefile, true);
 	 			            	  req.responseType = "blob";
 
 	 			            	  req.onload = function (event) {
@@ -342,7 +342,7 @@ $("#form1").on("submit", function(e){
 	 var indiceVideo=1;
 	 
 		    $.ajax({
-			    url: '/getMultimedias',
+			    url: '../getMultimedias',
 			    data: oMyForm,
 			    dataType: 'json',
 			    processData: false,
@@ -389,7 +389,7 @@ $("#form1").on("submit", function(e){
 					    			  oMyForm.append("info","");
 					    			 			$.ajax({
 					    			                type: "POST",
-					    			                url:   "http://localhost:8444/procesa",
+					    			                url:   "../procesa",
 					    			                data: oMyForm,
 					    			                contentType: false,
 					    			                processData: false,
@@ -432,7 +432,7 @@ $("#form1").on("submit", function(e){
 						    			                 error: function (data, status, er) {
 						    			                	  swal({
 						    			                          title: "PdfToQr",
-						    			                          text: "Se ha producido un error durante el proceso, por favor vuelva a intentarlo o contacte con el administrador para mas información",
+						    			                          text: "Se ha producido un error durante el proceso, por favor vuelva a intentarlo o contacte con el administrador para mas informaci&oacute;n",
 						    			                          confirmButtonColor: "#EF5350",
 						    			                          type: "error"
 						    			                  		});
@@ -446,7 +446,7 @@ $("#form1").on("submit", function(e){
 	            error: function (data, status, er) {
 	                	   swal({
 	                           title: "PdfToQr",
-	                           text: "Se ha producido un error durante el proceso, por favor vuelva a intentarlo o contacte con el administrador para mas información",
+	                           text: "Se ha producido un error durante el proceso, por favor vuelva a intentarlo o contacte con el administrador para mas informaci&oacute;n",
 	                           confirmButtonColor: "#EF5350",
 	                           type: "error"
 	                       });
