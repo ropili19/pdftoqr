@@ -133,6 +133,7 @@
 
 								<div class="tab-pane has-padding" id="panel-pill2">
 									<div class="panel-body">
+									</br>
 									<p class="text-muted">
 										A continuaci&oacute;n le mostramos un video en el cu&aacute;l puede observar como realizar la conversi&oacute;n de su <code>fichero PDF multimedia a PDF con codigo QR.</code>
 										<div class="col-xs-12">
@@ -147,9 +148,10 @@
 
 								<div class="tab-pane has-padding" id="panel-pill3">
 								<div class="panel-body">
-									
+									</br>
 									<div class="col-xs-12">
     									<div class="center-block">
+    									
     									<p class="text-muted"><h2><code>PDFtoQR</code> como herramienta de conversi&oacute;n de videos de PDF a PDF con codigos QR  </h2>
     									Es una aplicaci&oacute;n web cuya funci&oacute;n es la de transformar un pdf con contenido multimedia en un PDF con codigos QR que reemplazan los elementos multimedia para que asi al
     									 ser impresos no se pierda accesibilidad a ellos.<br>
@@ -164,7 +166,11 @@
 								
 							</div>
 						</div>
-
+							<footer>
+		<div class="text-center">
+			&copy;Realizado por Rosario del Pilar Orbezo Pastrana.
+		</div>
+	</footer>
 
 			</div>
 			<!-- /main content -->
@@ -173,13 +179,9 @@
 		<!-- /page content -->
 
 	</div>
-
+	
 </div>	
-	<footer>
-		<div class="text-center">
-			&copy;Realizado por Rosario del Pilar Orbezo Pastrana.
-		</div>
-	</footer>
+	
 	
 	
 
