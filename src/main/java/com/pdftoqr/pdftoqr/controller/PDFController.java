@@ -74,6 +74,7 @@ public class PDFController {
 	@Autowired
 	private OperacionesFichero serviceOperacionesFich;
 	Map<String, String> mapMultimedias = new HashMap<String, String>();
+	
     @RequestMapping("/pdftoqr")
     public String showHello(Model model){
        // model.addAttribute("saludo", "Mi primera aplicacion web Spring Boot");
@@ -119,19 +120,20 @@ public class PDFController {
 				}
 
 			}
-			document.close();
+			
 		} catch (IOException e) {
+			
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			//convFile.delete();
+		}finally {
 			try {
 				document.close();
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			//convFile.delete();
 		}
-		
 		return ResponseEntity.accepted().body(n_multi);
 		
 	}
