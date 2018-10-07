@@ -196,7 +196,7 @@
             </div>
 
             <div class="modal-footer">
-                <button class="btn btn-link" data-dismiss="modal"><i class="icon-cross"></i> Cancelar</button>
+                <button class="btn btn-primary" data-dismiss="modal"><i class="icon-cross"></i> Cancelar</button>
                 <button class="btn btn-primary" onclick="guardarUrl();"><i class="icon-check"></i> Continuar</button>
             </div>
         </div>
