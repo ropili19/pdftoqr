@@ -14,7 +14,9 @@ import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -70,7 +72,7 @@ import net.glxn.qrgen.image.ImageType;
 @Controller
 public class PDFController {
 	private static String HOSTYOUTUBE = "www.youtube.com";
-	
+	public static String UPLOADED_FOLDER="/pdftoqr/uploads/";
 	@Autowired
 	private OperacionesFichero serviceOperacionesFich;
 	Map<String, String> mapMultimedias = new HashMap<String, String>();
@@ -84,18 +86,30 @@ public class PDFController {
 	public ResponseEntity<List<Multimedia>> getMultimedias(@RequestParam("file") MultipartFile file) {
 		List<Multimedia> n_multi = new ArrayList<>();
 		int numpage = 0;
-		File convFile = new File(System.getProperty("java.io.tmpdir") + "/" + file.getOriginalFilename());
-		PDDocument document = null;
-		try {
+		File root=new File(".");
+		  // Get the file and save it somewhere
+        
+       
+        try {
+//        	 Path path = Paths.get(root.getCanonicalPath().toString()+"/uploads/" + file.getOriginalFilename());
+//        	byte[] bytes = file.getBytes();
+//			Files.write(path, bytes);
+        	
+        	 PDDocument pddoc = PDDocument.load(file.getInputStream());
+		
+		//File convFile = new File(System.getProperty("java.io.tmpdir") + "/" + file.getOriginalFilename());
+		
+		//PDDocument document = null;
+	
 
 			//file.transferTo(convFile);
-			document = PDDocument.load(convFile);
+		//	document = PDDocument.load(convFile);
 			System.out.println("entro en try");
 			//File convFile = new File( file.getOriginalFilename());
-			file.transferTo(convFile);
-			PDDocument.load(convFile);
+			//file.transferTo(convFile);
+			//PDDocument.load(convFile);
 			System.out.println("cargo load");
-			for (PDPage page : document.getPages()) {
+			for (PDPage page : pddoc.getPages()) {
 				numpage = numpage + 1;
 
 				for (PDAnnotation annotation : page.getAnnotations()) {
