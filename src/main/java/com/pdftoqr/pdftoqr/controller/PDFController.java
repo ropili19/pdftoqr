@@ -41,6 +41,7 @@ import org.apache.pdfbox.pdmodel.interactive.action.PDActionGoTo;
 import org.apache.pdfbox.pdmodel.interactive.action.PDActionURI;
 import org.apache.pdfbox.pdmodel.interactive.annotation.PDAnnotation;
 import org.apache.pdfbox.pdmodel.interactive.annotation.PDAnnotationLink;
+import org.apache.tomcat.util.http.fileupload.FileUploadException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.configurationprocessor.json.JSONArray;
 import org.springframework.boot.configurationprocessor.json.JSONException;
@@ -86,32 +87,12 @@ public class PDFController {
 	public ResponseEntity<List<Multimedia>> getMultimedias(@RequestParam("file") MultipartFile file) {
 		List<Multimedia> n_multi = new ArrayList<>();
 		int numpage = 0;
-		File root=new File(".");
-		  // Get the file and save it somewhere
-        
-       
         try {
-//        	 Path path = Paths.get(root.getCanonicalPath().toString()+"/uploads/" + file.getOriginalFilename());
-//        	byte[] bytes = file.getBytes();
-//			Files.write(path, bytes);
-        	
-        	 PDDocument pddoc = PDDocument.load(file.getInputStream());
-		
-		//File convFile = new File(System.getProperty("java.io.tmpdir") + "/" + file.getOriginalFilename());
-		
-		//PDDocument document = null;
-	
 
-			//file.transferTo(convFile);
-		//	document = PDDocument.load(convFile);
-			System.out.println("entro en try");
-			//File convFile = new File( file.getOriginalFilename());
-			//file.transferTo(convFile);
-			//PDDocument.load(convFile);
-			System.out.println("cargo load");
+        	 PDDocument pddoc = PDDocument.load(file.getInputStream());
+
 			for (PDPage page : pddoc.getPages()) {
 				numpage = numpage + 1;
-
 				for (PDAnnotation annotation : page.getAnnotations()) {
 					String url = "";
 					if (annotation.getSubtype().equals("RichMedia")) {
@@ -122,9 +103,7 @@ public class PDFController {
 					}
 					if (annotation instanceof PDAnnotationLink) {
 						url = getUrlforQR(annotation);
-			
-
-						  
+					  
 						if (!url.equals("")) {
 							Multimedia video = new Multimedia();
 							video.setPage(numpage);
@@ -139,7 +118,7 @@ public class PDFController {
 			
 		} catch (IOException e) {
 			
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 			//convFile.delete();
 		}finally {

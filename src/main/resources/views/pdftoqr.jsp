@@ -149,23 +149,7 @@
 								
 							</div>
 						</div>
-				<!-- Bootstrap file input -->
-<!-- 				<div class="panel panel-flat">
-					<div class="panel-heading">
-						<h3 class="panel-title">Bienvenid@ </h3>
-						<div class="heading-elements">
-							<ul class="icons-list">
-								<li><a data-action="collapse"></a></li>
-								<li><a data-action="reload"></a></li>
-								<li><a data-action="sendMessage" ><span class="icon-info3">Acerca de</span></a></li>
-								<li><a data-action="help"><span class="icon-help"></span></a></li>
-							</ul>
-						</div>
-					</div>
 
-					
-				</div> -->
-				<!-- /bootstrap file input -->
 
 			</div>
 			<!-- /main content -->
@@ -233,6 +217,9 @@ function compruebaUrl(){
 	    	
 	    	 bandera=false;
 	     }
+	     if(!isUrlValid(url.val())){
+	    	 bandera=false;
+	     }
 	});
 	return bandera;
 }
@@ -241,7 +228,7 @@ function compruebaUrl(){
 function guardarUrl(){
 
 	if(compruebaUrl()==true){//lanzo ajax 
-	 	//var info=JSON.stringify($("#form2").serializeArray())
+	 	
 		var fichero=file.files[0];
       	 var form = new FormData();
             form.append('file',file.files[0]);
@@ -456,5 +443,9 @@ $("#form1").on("submit", function(e){
 	            }//error
 	}); //ajax 
 });//submit
+function isUrlValid(url) {
+    return /^(https?|s?ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$/i.test(url);
+}
+
 </script>
 </html>
