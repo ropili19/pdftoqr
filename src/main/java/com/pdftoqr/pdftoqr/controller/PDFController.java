@@ -90,9 +90,11 @@ public class PDFController {
 
 			//file.transferTo(convFile);
 			document = PDDocument.load(convFile);
+			System.out.println("entro en try");
 			//File convFile = new File( file.getOriginalFilename());
 			file.transferTo(convFile);
 			PDDocument.load(convFile);
+			System.out.println("cargo load");
 			for (PDPage page : document.getPages()) {
 				numpage = numpage + 1;
 
@@ -127,12 +129,7 @@ public class PDFController {
 			e.printStackTrace();
 			//convFile.delete();
 		}finally {
-			try {
-				document.close();
-			} catch (IOException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
+			
 		}
 		return ResponseEntity.accepted().body(n_multi);
 		
