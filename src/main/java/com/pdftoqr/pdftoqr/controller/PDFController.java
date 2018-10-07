@@ -83,13 +83,13 @@ public class PDFController {
 	public ResponseEntity<List<Multimedia>> getMultimedias(@RequestParam("file") MultipartFile file) {
 		List<Multimedia> n_multi = new ArrayList<>();
 		int numpage = 0;
-		//File convFile = new File(System.getProperty("java.io.tmpdir") + "/" + file.getOriginalFilename());
+		File convFile = new File(System.getProperty("java.io.tmpdir") + "/" + file.getOriginalFilename());
 		PDDocument document = null;
 		try {
 
 			//file.transferTo(convFile);
-			//document = PDDocument.load(convFile);
-			File convFile = new File( file.getOriginalFilename());
+			document = PDDocument.load(convFile);
+			//File convFile = new File( file.getOriginalFilename());
 			file.transferTo(convFile);
 			PDDocument.load(convFile);
 			for (PDPage page : document.getPages()) {
