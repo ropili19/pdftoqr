@@ -249,7 +249,7 @@ function guardarUrl(){
 		 $.ajax(
             {
                 type: "POST",
-                url:   "http://localhost:8444/procesa",
+                url:   "/procesa",
                 data: form,
                 contentType: false,
                 processData: false,
@@ -342,7 +342,7 @@ $("#form1").on("submit", function(e){
 	 var indiceVideo=1;
 	 
 		    $.ajax({
-			    url: 'http://localhost:8444/getMultimedias',
+			    url: '/getMultimedias',
 			    data: oMyForm,
 			    dataType: 'json',
 			    processData: false,
