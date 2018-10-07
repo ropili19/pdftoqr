@@ -49,7 +49,21 @@
 	var exampleImages = '../assets/images/';
 	var uploadUrl = '../getMultimedias';
 </script>
-
+<style>
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+.embed-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
 <div class="container">
 	
 <div class="navbar navbar-inverse">
@@ -123,9 +137,10 @@
 										A continuaci&oacute;n le mostramos un video en el cu&aacute;l puede observar como realizar la conversi&oacute;n de su <code>fichero PDF multimedia a PDF con codigo QR.</code>
 										<div class="col-xs-12">
     									<div class="center-block">
-    										
+    										<div class="embed-container">
 
-											<iframe width="560" height="315" src="https://www.youtube.com/embed/sCcm5iFHrJc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+												<iframe width="560" height="315" src="https://www.youtube.com/embed/sCcm5iFHrJc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+												</div>
 										</div></div>
 										</div>
 								</div>
