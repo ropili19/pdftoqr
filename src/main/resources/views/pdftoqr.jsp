@@ -136,6 +136,7 @@
 									</br>
 									<p class="text-muted">
 										A continuaci&oacute;n le mostramos un video en el cu&aacute;l puede observar como realizar la conversi&oacute;n de su <code>fichero PDF multimedia a PDF con codigo QR.</code>
+										</p></br>
 										<div class="col-xs-12">
     									<div class="center-block">
     										<div class="embed-container">
@@ -152,7 +153,7 @@
 									<div class="col-xs-12">
     									<div class="center-block">
     									
-    									<p class="text-muted"><h2><code>PDFtoQR</code> como herramienta de conversi&oacute;n de videos de PDF a PDF con codigos QR  </h2>
+    									<p class="text-muted"><h2><code>PDFtoQR</code> como herramienta de conversi&oacute;n de documentos PDF con videos  a  documentos PDF con codigos QR  </h2>
     									Es una aplicaci&oacute;n web cuya funci&oacute;n es la de transformar un pdf con contenido multimedia en un PDF con codigos QR que reemplazan los elementos multimedia para que asi al
     									 ser impresos no se pierda accesibilidad a ellos.<br>
     									 Esta aplicaci&oacute;n se desarrollo como objetivo en el Trabajo de Fin de Grado del <code> Grado en Ingenier&iacute;a Inform&aacute;tica de la Universidad Rey Juan Carlos</code> siendo el tutor y creador de la idea el profesor <b>Jaime Urquiza</b> </p>
