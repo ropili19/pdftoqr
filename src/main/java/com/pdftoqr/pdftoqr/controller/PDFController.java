@@ -99,6 +99,7 @@ public class PDFController {
 						COSArray array = (COSArray) annotation.getCOSObject()
 								.getObjectFromPath("RichMediaContent/Assets/Names/");
 						Multimedia video = getInfoRichMedia(annotation,numpage, numpage);
+						video.setNamePdf(file.getOriginalFilename());
 						n_multi.add(video);
 					}
 					if (annotation instanceof PDAnnotationLink) {
@@ -312,8 +313,9 @@ public class PDFController {
 			} catch (MalformedURLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+				return getImgforVideo(url);
 			}
-			return null;
+			
 		}
 		private BufferedImage getImgforYoutube(String url) {
 			BufferedImage imgMarca = null;

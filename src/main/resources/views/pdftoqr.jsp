@@ -371,9 +371,14 @@ $("#form1").on("submit", function(e){
 	       				
 			       				$('#form2').empty();
 			       				var form2=$("#form2");
+			       				var cont=0;
 			       				$.each(data, function(i, item) {
 			    					
 			    					if(item.urlVideo==null){
+			    						if(cont==0){
+			    						 $(form2).append('<b>Nombre del Documento PDF : <code>'+item.namePdf+'</code></b><br>');
+			    						 cont++;
+			    						}
 				    					$(form2).append('<hr><input type="hidden" name="id_'+indiceVideo+'" value="'+item.id+'">');
 				    					$(form2).append('<input type="hidden" name="name_'+indiceVideo+'" value="'+item.nameVideo+'">');
 				    					$(form2).append('<input type="hidden" name="page_'+indiceVideo+'" value="'+item.page+'">');

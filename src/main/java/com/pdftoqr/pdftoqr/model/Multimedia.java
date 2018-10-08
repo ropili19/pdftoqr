@@ -4,15 +4,15 @@ import java.awt.image.BufferedImage;
 
 public class Multimedia {
 	 private String id  ;
-	 private BufferedImage qrVideo;
+	 private String namePdf;
 	 private String urlVideo;
 	 private String nameVideo;
 	 private int page;
 
-	public Multimedia(String id, BufferedImage qrVideo, String urlVideo, String nameVideo, int page) {
+	public Multimedia(String id, String namePdf, String urlVideo, String nameVideo, int page) {
 		super();
 		this.id = id;
-		this.qrVideo = qrVideo;
+		this.namePdf = namePdf;
 		this.urlVideo = urlVideo;
 		this.nameVideo = nameVideo;
 		this.page = page;
@@ -27,17 +27,18 @@ public class Multimedia {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public BufferedImage getQrVideo() {
-		return qrVideo;
+	public String getNamePdf() {
+		return namePdf ;
 	}
-	public void setQrVideo(BufferedImage qrVideo) {
-		this.qrVideo = qrVideo;
+	public void setNamePdf(String namePdf) {
+		this.namePdf = namePdf;
+	}
+	
+	public void setUrlVideo(String urlVideo) {
+		this.urlVideo = urlVideo;
 	}
 	public String getUrlVideo() {
 		return urlVideo;
-	}
-	public void setUrlVideo(String urlVideo) {
-		this.urlVideo = urlVideo;
 	}
 	public String getNameVideo() {
 		return nameVideo;
@@ -54,7 +55,7 @@ public class Multimedia {
 
 	 @Override
 	public String toString() {
-		return "Multimedia [id=" + id + ", qrVideo=" + qrVideo + ", urlVideo=" + urlVideo + ", nameVideo=" + nameVideo
+		return "Multimedia [id=" + id + ", namePdf=" + namePdf + ", urlVideo=" + urlVideo + ", nameVideo=" + nameVideo
 				+ ", page=" + page + "]";
 	}
 }
