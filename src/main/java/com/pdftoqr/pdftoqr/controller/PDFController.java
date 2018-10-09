@@ -4,6 +4,7 @@ package com.pdftoqr.pdftoqr.controller;
 
 import java.awt.Image;
 import java.awt.image.BufferedImage;
+import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -11,9 +12,11 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.nio.ByteOrder;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -25,6 +28,8 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import javax.imageio.ImageIO;
+import javax.imageio.stream.IIOByteBuffer;
+import javax.imageio.stream.ImageInputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.text.Document;
@@ -348,10 +353,13 @@ public class PDFController {
 		private BufferedImage getImgforVideo(String url) {
 			BufferedImage imgMarca = null;
 		
-				try {
-					File raiz=new File(".");
-					File sourceimage = new File(raiz.getCanonicalPath()+"\\src\\main\\java\\com\\pdftoqr\\config\\utils\\video.jpg");
-					imgMarca = ImageIO.read(sourceimage);
+				try {//TODO:
+					InputStream inputStream = 
+						      getClass().getClassLoader().getResourceAsStream("video.jpg");
+						  // BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream ));
+					//File raiz=new File(".");
+					//File sourceimage = new File(raiz.getCanonicalPath()+"\\src\\main\\java\\com\\pdftoqr\\config\\utils\\video.jpg");
+					imgMarca = ImageIO.read(inputStream );
 					
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
