@@ -287,7 +287,7 @@ function guardarUrl(){
 	 			            	    console.log(blob.size);
 	 			            	    var link=document.createElement('a');
 	 			            	    link.href=window.URL.createObjectURL(blob);
-	 			            	    link.download="/downloadFile/"+namefile;
+	 			            	    link.download=namefile;
 	 			            	    link.click();
 	 			            	    $(".fileinput-remove").click();
 	 			            	  };
@@ -301,7 +301,7 @@ function guardarUrl(){
                  error: function (data, status, er) {
                 	  swal({
                           title: "PdfToQr",
-                          text: "Se ha producido un error durante el proceso, por favor vuelva a intentarlo o contacte con el administrador para mas información",
+                          text: "Se ha producido un error durante el proceso, por favor vuelva a intentarlo o contacte con el administrador para mas informaci\u00f3n",
                           confirmButtonColor: "#EF5350",
                           type: "error"
                       });
@@ -428,7 +428,7 @@ $("#form1").on("submit", function(e){
 					    				 			            	    console.log(blob.size);
 					    				 			            	    var link=document.createElement('a');
 					    				 			            	    link.href=window.URL.createObjectURL(blob);
-					    				 			            	    link.download="/downloadFile/"+namefile;
+					    				 			            	    link.download=namefile;
 					    				 			            	    link.click();
 					    				 			            	    $(".fileinput-remove").click();
 					    				 			            	  };
@@ -456,7 +456,7 @@ $("#form1").on("submit", function(e){
 	            error: function (data, status, er) {
 	                	   swal({
 	                           title: "PdfToQr",
-	                           text: "Se ha producido un error durante el proceso, por favor vuelva a intentarlo o contacte con el administrador para mas informaci&oacute;n",
+	                           text: "Se ha producido un error durante el proceso, por favor vuelva a intentarlo o contacte con el administrador para mas informaci\u00f3n",
 	                           confirmButtonColor: "#EF5350",
 	                           type: "error"
 	                       });

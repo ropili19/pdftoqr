@@ -27,6 +27,7 @@ import java.util.concurrent.TimeUnit;
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.text.Document;
 
 import org.apache.pdfbox.cos.COSArray;
 import org.apache.pdfbox.cos.COSBase;
@@ -132,19 +133,21 @@ public class PDFController {
 	
 	  @RequestMapping(value = "/procesa", method = RequestMethod.POST, consumes = {"multipart/form-data"})
 	    public ResponseEntity<UploadFileResponse> fileUploadWithNumber(@RequestParam(value = "info", required = true) String info,
-	                                                         @RequestParam(value = "file", required = true) MultipartFile file) {
+	                                                         @RequestParam(value = "file", required = true) MultipartFile file) throws FileNotFoundException {
 
 		  UploadFileResponse generado = new UploadFileResponse();
 			try {
 				JSONArray jsonmultis = parseoInfo(info);
-		    	File convFile = new File(System.getProperty("java.io.tmpdir") + "/" + file.getOriginalFilename());
-				file.transferTo(convFile);
-				PDDocument document = PDDocument.load(convFile);
+//		    	File convFile = new File(System.getProperty("java.io.tmpdir") + "/" + file.getOriginalFilename());
+//				file.transferTo(convFile);
+//				PDDocument document = PDDocument.load(convFile);
+				 PDDocument document = PDDocument.load(file.getInputStream());
 				generado= parserFile(document,file.getOriginalFilename(),jsonmultis,generado);
-				
+				document.close();
 			} catch (IllegalStateException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				if (file == null) {
+		            throw new FileNotFoundException("Fichero no recibido ");
+		        }
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -191,10 +194,10 @@ public class PDFController {
 	}
 		private UploadFileResponse parserFile(PDDocument docoriginal, String namefile, JSONArray jsonmultis, UploadFileResponse generado) {
 	    //	 Path rutafile = this.fileStorageLocation.resolve(filePath.getFileName()).normalize();
-			File filetemp = new File(System.getProperty("java.io.tmpdir") + "/" + namefile+"_QR");
+		//	File filetemp = new File(System.getProperty("java.io.tmpdir") + "/" + namefile+"_QR");
 	        
-			Resource resourceNew = null;
-	         File raiz=new File(".");
+		//	Resource resourceNew = null;
+	       //  File raiz=new File(".");
 	         PDDocument pdoc=null;
 	        
 			try {
@@ -245,7 +248,7 @@ public class PDFController {
 						/** Al descomentar esta línea se crearia un fichero temporal en la carpeta indicada en el properties.*/
 						serviceOperacionesFich.creacionFichTemporal(pdoc,namefile,generado);
 						
-					
+						
 						 docoriginal.close();
 						// serviceOperacionesFich.printResource(namefile);
 					} catch (IOException e) {					
@@ -333,14 +336,12 @@ public class PDFController {
 				
 				URL urlImg = new URL("http://img.youtube.com/vi/" + idUri + "/0.jpg");
 				imgMarca = ImageIO.read(urlImg);
-				//File outputfile = new File(this.serviceOperacionesFich.toAbsolutePath().toString() + "\\image.png");
-				//ImageIO.write(imgMarca, "png", outputfile);
-			} catch (MalformedURLException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			} catch (IOException e2) {
-				e2.printStackTrace();
+
+			} catch (IOException e) {
+		
+				imgMarca=getImgforVideo(url);
 			}
+
 			return imgMarca;
 
 		}
