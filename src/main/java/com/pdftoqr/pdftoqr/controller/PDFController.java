@@ -337,7 +337,7 @@ public class PDFController {
 				URL urlImg = new URL("http://img.youtube.com/vi/" + idUri + "/0.jpg");
 				imgMarca = ImageIO.read(urlImg);
 
-			} catch (IOException e) {
+			} catch (Exception e) {
 		
 				imgMarca=getImgforVideo(url);
 			}
