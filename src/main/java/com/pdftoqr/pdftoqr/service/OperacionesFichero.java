@@ -10,6 +10,7 @@ import java.awt.print.PrinterJob;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -153,7 +154,35 @@ public class OperacionesFichero {
 		}
 
 	}
+	public BufferedImage getImgforVideo(String url) throws FileNotFoundException {
+		BufferedImage imgMarca = null;
+	
+			
+				BufferedImage imgmarcaunknow;
+				try {
+					File sourceimage = new File(this.ubicacionFichero.toAbsolutePath().toString().replace("uploads","usr//local//video.jpg"));
+					imgmarcaunknow = ImageIO.read(sourceimage);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					throw new FileNotFoundException("File image not found " + url);
+				}
+					  // BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream ));
+				//File raiz=new File(".");
+				//File sourceimage = new File(raiz.getCanonicalPath()+"\\src\\main\\java\\com\\pdftoqr\\config\\utils\\video.jpg");
+//				Path filePath = this.ubicacionFichero.toAbsolutePath();
+//				File file = new File(filePath+"//video.jpg"); // I have bear.jpg in my working directory  
+//			    FileInputStream fis = new FileInputStream(file);  
+//		   imgMarca = ImageIO.read(fis); //reading the image file  
+//				InputStream inputStream = 
+//					      getClass().getClassLoader().getResourceAsStream(filePath+"video.jpg");
+//				imgMarca = ImageIO.read(inputStream );
+				
+			
 
+		
+		return imgmarcaunknow;
+
+	}
 	public void creacionFichTemporal(PDDocument pdoc, String namefile, UploadFileResponse generado) {
 		// TODO Auto-generated method stub
 	

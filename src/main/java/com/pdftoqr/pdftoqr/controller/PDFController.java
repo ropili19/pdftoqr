@@ -307,7 +307,7 @@ public class PDFController {
 		}
 
 
-		private BufferedImage getImgforQR(String url) {
+		private BufferedImage getImgforQR(String url) throws FileNotFoundException {
 			// TODO Auto-generated method stub
 			// La url del video es de youtube?
 			URL uri;
@@ -316,16 +316,19 @@ public class PDFController {
 				if (uri.getHost().equals(HOSTYOUTUBE))
 					return getImgforYoutube(url);
 				else {
-					return getImgforVideo(url);
+					return serviceOperacionesFich.getImgforVideo(url);
 				}
 			} catch (MalformedURLException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
-				return getImgforVideo(url);
+				//e.printStackTrace();
+				return serviceOperacionesFich.getImgforVideo(url);
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				throw new FileNotFoundException("Fichero no encontrado " + url);
 			}
 			
 		}
-		private BufferedImage getImgforYoutube(String url) {
+		private BufferedImage getImgforYoutube(String url) throws FileNotFoundException {
 			BufferedImage imgMarca = null;
 			try {
 				 String idUri="";
@@ -344,32 +347,13 @@ public class PDFController {
 
 			} catch (Exception e) {
 		
-				imgMarca=getImgforVideo(url);
+				imgMarca=serviceOperacionesFich.getImgforVideo(url);
 			}
 
 			return imgMarca;
 
 		}
-		private BufferedImage getImgforVideo(String url) {
-			BufferedImage imgMarca = null;
-		
-				try {//TODO:
-					InputStream inputStream = 
-						      getClass().getClassLoader().getResourceAsStream("video.jpg");
-						  // BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream ));
-					//File raiz=new File(".");
-					//File sourceimage = new File(raiz.getCanonicalPath()+"\\src\\main\\java\\com\\pdftoqr\\config\\utils\\video.jpg");
-					imgMarca = ImageIO.read(inputStream );
-					
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-
-			
-			return imgMarca;
-
-		}
+	
 		private String getUrlforQR(PDAnnotation annotation) {
 			String url = "";
 
