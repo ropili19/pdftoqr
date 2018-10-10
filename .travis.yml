@@ -4,11 +4,10 @@ jdk:
 branches:
   only:
   - master
-  - develop
 notifications:
   email:
     recipients:
-    - rosario.orbezo.pastrana@alumnos.upm.es
+    - rp.orbezo@alumnos.urjc.com
 script:
 - mvn verify
 - mvn org.jacoco:jacoco-maven-plugin:prepare-agent verify
