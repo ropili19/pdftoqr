@@ -8,6 +8,8 @@ notifications:
   email:
     recipients:
     - rp.orbezo@alumnos.urjc.com
+    before_install:
+  - chmod +x mvnw
 script:
 - mvn verify
 - mvn org.jacoco:jacoco-maven-plugin:prepare-agent verify
