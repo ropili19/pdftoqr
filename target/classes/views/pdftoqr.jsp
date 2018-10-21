@@ -200,7 +200,7 @@ background-color: #CB0017 !important;
             <div class="modal-body">
                 <div class="alert alert-danger alert-styled-left text-blue-800 content-group">
                     <span class="text-semibold">Importante!</span> El proceso no puede continuar debido a que los siguientes videos no tienen Url.
-                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <button type="button" class="close" data-dismiss="alert">Ã—</button>
                 </div>
 
                 <h6 class="text-semibold"><i class="icon-law position-left"></i> Por favor, introduzca las Url's para poder continuar</h6>
