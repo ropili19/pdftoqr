@@ -54,7 +54,7 @@ a:focus {
 }*/
 
 a.bg-primary:focus, a.bg-primary:hover {
-    background-color: #E1261C;
+    background-color: #CB0017;
 }
 
 a.bg-info:focus, a.bg-info:hover {

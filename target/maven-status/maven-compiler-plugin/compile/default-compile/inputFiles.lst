@@ -1,8 +1,10 @@
 C:\tfg\pdftoqr\src\main\java\com\pdftoqr\pdftoqr\exceptions\FileNotFoundException.java
+C:\tfg\pdftoqr\src\main\java\com\pdftoqr\pdftoqr\exceptions\FileConversException.java
+C:\tfg\pdftoqr\src\main\java\com\pdftoqr\config\utils\Utils.java
 C:\tfg\pdftoqr\src\main\java\com\pdftoqr\config\PDFuploadProperties.java
 C:\tfg\pdftoqr\src\main\java\com\pdftoqr\pdftoqr\PdftoqrApplication.java
 C:\tfg\pdftoqr\src\main\java\com\pdftoqr\pdftoqr\model\Multimedia.java
+C:\tfg\pdftoqr\src\main\java\com\pdftoqr\config\utils\Constants.java
 C:\tfg\pdftoqr\src\main\java\com\pdftoqr\pdftoqr\model\UploadFileResponse.java
 C:\tfg\pdftoqr\src\main\java\com\pdftoqr\pdftoqr\service\OperacionesFichero.java
 C:\tfg\pdftoqr\src\main\java\com\pdftoqr\pdftoqr\controller\PDFController.java
-C:\tfg\pdftoqr\src\main\java\com\pdftoqr\pdftoqr\exceptions\FileUploadException.java

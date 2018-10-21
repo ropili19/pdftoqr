@@ -138,7 +138,7 @@ $('#file').click(function(){
 	  fich=oMyForm;
 	 var indiceVideo=1;
 	  $.ajax({
-	    url: 'http://localhost:8444/procesa',
+	    url: '/procesa',
 	    data: oMyForm,
 	    dataType: 'json',
 	    processData: false,
@@ -147,7 +147,7 @@ $('#file').click(function(){
 	    beforeSend: function(data) {
 	    	$("#mensaje").val("loading");
 			    $.ajax({
-			    url: 'http://localhost:8444/getMultimedias',
+			    url: '/getMultimedias',
 			    data: oMyForm,
 			    dataType: 'json',
 			    processData: false,

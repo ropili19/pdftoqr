@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>PDF to QR</title>
+	<title> PDF to QR </title>
    
 	<!-- font Lato -->
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
@@ -34,11 +34,8 @@
     	<script type="text/javascript" src="../assets/js/core/cr_fileinput.min.js"></script>
     	<script type="text/javascript" src="../assets/js/core/app.js"></script>
     	<script type="text/javascript" src="../assets/js/pages/uploader_bootstrap.js"></script>
-    		<!-- Header JS files -->
-    		
-    	<script type="text/javascript" src="../assets/js/core/cr.js"></script><script type="text/javascript" src="../assets/js/plugins/loaders/pace.min.js"></script><script type="text/javascript" src="../assets/js/plugins/loaders/blockui.min.js"></script><script type="text/javascript" src="../assets/js/plugins/ui/nicescroll.min.js"></script><script type="text/javascript" src="../assets/js/plugins/ui/drilldown.js"></script><script type="text/javascript" src="../assets/js/plugins/visualization/d3/d3.min.js"></script><script type="text/javascript" src="../assets/js/plugins/visualization/d3/d3_tooltip.js"></script><script type="text/javascript" src="../assets/js/plugins/forms/styling/switchery.min.js"></script><script type="text/javascript" src="../assets/js/plugins/forms/styling/uniform.min.js"></script><script type="text/javascript" src="../assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script><script type="text/javascript" src="../assets/js/plugins/ui/moment/moment.min.js"></script><script type="text/javascript" src="../assets/js/plugins/pickers/daterangepicker.js"></script><script type="text/javascript" src="../assets/js/plugins/notifications/bootbox.min.js"></script><script type="text/javascript" src="../assets/js/plugins/notifications/sweet_alert.min.js"></script><script type="text/javascript" src="../assets/js/core/app.js"></script><script type="text/javascript" src="../assets/js/pages/components_modals.js"></script>
-	<!-- Header JS files -->
-	<!-- Header JS files -->
+		<script type="text/javascript" src="../assets/js/core/cr.js"></script><script type="text/javascript" src="../assets/js/plugins/loaders/pace.min.js"></script><script type="text/javascript" src="../assets/js/plugins/loaders/blockui.min.js"></script><script type="text/javascript" src="../assets/js/plugins/ui/nicescroll.min.js"></script><script type="text/javascript" src="../assets/js/plugins/ui/drilldown.js"></script><script type="text/javascript" src="../assets/js/plugins/visualization/d3/d3.min.js"></script><script type="text/javascript" src="../assets/js/plugins/visualization/d3/d3_tooltip.js"></script><script type="text/javascript" src="../assets/js/plugins/forms/styling/switchery.min.js"></script><script type="text/javascript" src="../assets/js/plugins/forms/styling/uniform.min.js"></script><script type="text/javascript" src="../assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script><script type="text/javascript" src="../assets/js/plugins/ui/moment/moment.min.js"></script><script type="text/javascript" src="../assets/js/plugins/pickers/daterangepicker.js"></script><script type="text/javascript" src="../assets/js/plugins/notifications/bootbox.min.js"></script><script type="text/javascript" src="../assets/js/plugins/notifications/sweet_alert.min.js"></script><script type="text/javascript" src="../assets/js/core/app.js"></script><script type="text/javascript" src="../assets/js/pages/components_modals.js"></script>
+
 </head>
 
 <body onload="active_menu_item('extensiones', 'subir_archivos')">
@@ -47,18 +44,32 @@
 	<!-- /second navbar -->
 <script type="text/javascript">
 	var exampleImages = '../assets/images/';
-	var uploadUrl = '/getMultimedias';
+	var uploadUrl = '../getMultimedias';
 </script>
-
-<div class="container">
-	
-<div class="navbar navbar-inverse">
-		<!-- container Main Navbar-->
-		<div class="container">
+<style>
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+.embed-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+}
+.bg-primary{
+background-color: #CB0017 !important;
+}
+</style>
+	<div class="row  bg-primary">
+		<div class="container ">
 			<div class="navbar-header">
-				<a class="navbar-brand logo_desktop" href="../prueba"><img src="../assets/img/gif1.gif" alt=""></a>
+				<a class="navbar-brand logo_desktop" href="../pdftoqr"><img src="../assets/img/gif1.gif" alt=""></a>
 				<!-- logo para version movil -->
-				<a class="navbar-brand logo_mobile" href="../prueba"><img src="../assets/img/gif1.gif" alt=""></a>
+				<a class="navbar-brand logo_mobile" href="../pdftoqr"><img src="../assets/img/gif1.gif" alt=""></a>
 				<span class="title_mobile">PDF to QR </span>
 				
 			</div>
@@ -70,7 +81,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- / container Main Navbar-->
+		
 	</div>
 
 	<!-- Page container -->
@@ -100,7 +111,7 @@
 									<div class="panel-body">
 						<p class="text-muted">Por favor suba un fichero <code>PDF</code> para que sea procesado incorporando un c&oacute;digo QR por cada video Multimedia. </p><br>
 
-						<form class="form-horizontal" id="form1" name="form1" action="/getMultimedias" method="POST" enctype="multipart/form-data">
+						<form class="form-horizontal" id="form1" name="form1" action="../getMultimedias" method="POST" enctype="multipart/form-data">
 							<div class="form-group">
 								<label class="col-lg-2 control-label text-semibold">Subir fichero:</label>
 								<div class="col-lg-10">
@@ -119,26 +130,30 @@
 
 								<div class="tab-pane has-padding" id="panel-pill2">
 									<div class="panel-body">
+									</br>
 									<p class="text-muted">
 										A continuaci&oacute;n le mostramos un video en el cu&aacute;l puede observar como realizar la conversi&oacute;n de su <code>fichero PDF multimedia a PDF con codigo QR.</code>
+										</p></br>
 										<div class="col-xs-12">
     									<div class="center-block">
-    										
+    										<div class="embed-container">
 
-											<iframe width="560" height="315" src="https://www.youtube.com/embed/sCcm5iFHrJc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+												<iframe width="560" height="315" src="https://www.youtube.com/embed/sCcm5iFHrJc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+												</div>
 										</div></div>
 										</div>
 								</div>
 
 								<div class="tab-pane has-padding" id="panel-pill3">
 								<div class="panel-body">
-									
+									</br>
 									<div class="col-xs-12">
     									<div class="center-block">
-    									<p class="text-muted"><h2><code>PDFtoQR</code> como herramienta de conversi&oacute;n de videos de PDF a PDF con codigos QR  </h2>
+    									
+    									<p class="text-muted"><h2><code>PDFtoQR</code> como herramienta de conversi&oacute;n de documentos PDF con videos  a  documentos PDF con codigos QR  </h2>
     									Es una aplicaci&oacute;n web cuya funci&oacute;n es la de transformar un pdf con contenido multimedia en un PDF con codigos QR que reemplazan los elementos multimedia para que asi al
     									 ser impresos no se pierda accesibilidad a ellos.<br>
-    									 Esta aplicaci&oacute;n se desarrollo como objetivo en el Trabajo de Fin de Grado del <code> Grado en Ingenier&iacute;a Inform&aacute;tica de la Universidad Rey Juan Carlos</code> siendo el tutor y creador de la idea el profesor <b>Jaime Urquiza</b> </p>
+    									 Esta aplicaci&oacute;n se desarrollo como objetivo en el Trabajo de Fin de Grado del <code> Grado en Ingenier&iacute;a Inform&aacute;tica de la Universidad Rey Juan Carlos</code> siendo el tutor y creador de la idea el profesor <b>Jaime Urquiza Fuentes</b>&nbsp;(<a href="mailto:jaime.urquiza@urjc.es">jaime.urquiza@urjc.es</a>) y la desarrolladora la alumna <b>Rosario del Pilar Orbezo Pastrana</b>&nbsp;(<a href="mailto:rp.orbezo@alumnos.urjc.es">rp.orbezo@alumnos.urjc.es</a>)</p>
     									 <br>
     									 
     									</div>
@@ -149,38 +164,25 @@
 								
 							</div>
 						</div>
-				<!-- Bootstrap file input -->
-<!-- 				<div class="panel panel-flat">
-					<div class="panel-heading">
-						<h3 class="panel-title">Bienvenid@ </h3>
-						<div class="heading-elements">
-							<ul class="icons-list">
-								<li><a data-action="collapse"></a></li>
-								<li><a data-action="reload"></a></li>
-								<li><a data-action="sendMessage" ><span class="icon-info3">Acerca de</span></a></li>
-								<li><a data-action="help"><span class="icon-help"></span></a></li>
-							</ul>
-						</div>
-					</div>
 
-					
-				</div> -->
-				<!-- /bootstrap file input -->
 
 			</div>
 			<!-- /main content -->
 
 		</div>
+			<div class="row bg-primary">
+		<footer>
+			<div class="text-center">
+						
+			</div>
+	</footer>
+	</div>
 		<!-- /page content -->
 
 	</div>
 
-</div>	
-	<footer>
-		<div class="text-center">
-			&copy;Realizado por Rosario del Pilar Orbezo Pastrana.
-		</div>
-	</footer>
+
+	
 	
 	
 
@@ -212,7 +214,7 @@
             </div>
 
             <div class="modal-footer">
-                <button class="btn btn-link" data-dismiss="modal"><i class="icon-cross"></i> Cancelar</button>
+                <button class="btn btn-primary" data-dismiss="modal"><i class="icon-cross"></i> Cancelar</button>
                 <button class="btn btn-primary" onclick="guardarUrl();"><i class="icon-check"></i> Continuar</button>
             </div>
         </div>
@@ -233,6 +235,9 @@ function compruebaUrl(){
 	    	
 	    	 bandera=false;
 	     }
+	     if(!isUrlValid(url.val())){
+	    	 bandera=false;
+	     }
 	});
 	return bandera;
 }
@@ -241,7 +246,7 @@ function compruebaUrl(){
 function guardarUrl(){
 
 	if(compruebaUrl()==true){//lanzo ajax 
-	 	//var info=JSON.stringify($("#form2").serializeArray())
+	 	
 		var fichero=file.files[0];
       	 var form = new FormData();
             form.append('file',file.files[0]);
@@ -249,7 +254,7 @@ function guardarUrl(){
 		 $.ajax(
             {
                 type: "POST",
-                url:   "http://localhost:8444/procesa",
+                url:   "../procesa",
                 data: form,
                 contentType: false,
                 processData: false,
@@ -274,7 +279,7 @@ function guardarUrl(){
 	 			            if (isConfirm) {
 	 			            	
 	 			            	 var req = new XMLHttpRequest();
-	 			            	  req.open("GET", "/downloadFile/"+namefile, true);
+	 			            	  req.open("GET", "../downloadFile/"+namefile, true);
 	 			            	  req.responseType = "blob";
 
 	 			            	  req.onload = function (event) {
@@ -282,7 +287,7 @@ function guardarUrl(){
 	 			            	    console.log(blob.size);
 	 			            	    var link=document.createElement('a');
 	 			            	    link.href=window.URL.createObjectURL(blob);
-	 			            	    link.download="/downloadFile/"+namefile;
+	 			            	    link.download=namefile;
 	 			            	    link.click();
 	 			            	    $(".fileinput-remove").click();
 	 			            	  };
@@ -296,7 +301,7 @@ function guardarUrl(){
                  error: function (data, status, er) {
                 	  swal({
                           title: "PdfToQr",
-                          text: "Se ha producido un error durante el proceso, por favor vuelva a intentarlo o contacte con el administrador para mas información",
+                          text: "Se ha producido un error durante el proceso, por favor vuelva a intentarlo o contacte con el administrador para mas informaci\u00f3n",
                           confirmButtonColor: "#EF5350",
                           type: "error"
                       });
@@ -332,9 +337,7 @@ $(".fileinput-remove").click(function(){
 	$("#errorsinmultimedia").css("display", "none");	
 });
 $("#form1").on("submit", function(e){
-	   //Code: Action (like ajax...)
-	   e.preventDefault();
-	 
+	   e.preventDefault();	 
 	  var oMyForm = new FormData();
 	  oMyForm.append("file", file.files[0]);
 	  oMyForm.append("info","");
@@ -342,7 +345,7 @@ $("#form1").on("submit", function(e){
 	 var indiceVideo=1;
 	 
 		    $.ajax({
-			    url: 'http://localhost:8444/getMultimedias',
+			    url: '../getMultimedias',
 			    data: oMyForm,
 			    dataType: 'json',
 			    processData: false,
@@ -360,15 +363,17 @@ $("#form1").on("submit", function(e){
 	       				
 	       			}
 					else{
-	       				
-	       			
-	       			
-	       				
+
 			       				$('#form2').empty();
 			       				var form2=$("#form2");
+			       				var cont=0;
 			       				$.each(data, function(i, item) {
 			    					
 			    					if(item.urlVideo==null){
+			    						if(cont==0){
+			    						 $(form2).append('<b>Nombre del Documento PDF : <code>'+item.namePdf+'</code></b><br>');
+			    						 cont++;
+			    						}
 				    					$(form2).append('<hr><input type="hidden" name="id_'+indiceVideo+'" value="'+item.id+'">');
 				    					$(form2).append('<input type="hidden" name="name_'+indiceVideo+'" value="'+item.nameVideo+'">');
 				    					$(form2).append('<input type="hidden" name="page_'+indiceVideo+'" value="'+item.page+'">');
@@ -389,7 +394,7 @@ $("#form1").on("submit", function(e){
 					    			  oMyForm.append("info","");
 					    			 			$.ajax({
 					    			                type: "POST",
-					    			                url:   "http://localhost:8444/procesa",
+					    			                url:   "../procesa",
 					    			                data: oMyForm,
 					    			                contentType: false,
 					    			                processData: false,
@@ -418,7 +423,7 @@ $("#form1").on("submit", function(e){
 					    				 			            	    console.log(blob.size);
 					    				 			            	    var link=document.createElement('a');
 					    				 			            	    link.href=window.URL.createObjectURL(blob);
-					    				 			            	    link.download="/downloadFile/"+namefile;
+					    				 			            	    link.download=namefile;
 					    				 			            	    link.click();
 					    				 			            	    $(".fileinput-remove").click();
 					    				 			            	  };
@@ -432,7 +437,7 @@ $("#form1").on("submit", function(e){
 						    			                 error: function (data, status, er) {
 						    			                	  swal({
 						    			                          title: "PdfToQr",
-						    			                          text: "Se ha producido un error durante el proceso, por favor vuelva a intentarlo o contacte con el administrador para mas información",
+						    			                          text: "Se ha producido un error durante el proceso, por favor vuelva a intentarlo o contacte con el administrador para mas informaci&oacute;n",
 						    			                          confirmButtonColor: "#EF5350",
 						    			                          type: "error"
 						    			                  		});
@@ -446,7 +451,7 @@ $("#form1").on("submit", function(e){
 	            error: function (data, status, er) {
 	                	   swal({
 	                           title: "PdfToQr",
-	                           text: "Se ha producido un error durante el proceso, por favor vuelva a intentarlo o contacte con el administrador para mas información",
+	                           text: "Se ha producido un error durante el proceso, por favor vuelva a intentarlo o contacte con el administrador para mas informaci\u00f3n",
 	                           confirmButtonColor: "#EF5350",
 	                           type: "error"
 	                       });
@@ -456,5 +461,9 @@ $("#form1").on("submit", function(e){
 	            }//error
 	}); //ajax 
 });//submit
+function isUrlValid(url) {
+    return /^(https?|s?ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$/i.test(url);
+}
+
 </script>
 </html>

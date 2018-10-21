@@ -10,10 +10,11 @@ public class PDFuploadProperties {
 
     public String getUploadDir() {
         return uploadDir;
-      // return  System.getenv("PATH_FILE_PDF");
+     
     }
 
     public void setUploadDir(String uploadDir) {
         this.uploadDir = uploadDir;
     }
+    
 }

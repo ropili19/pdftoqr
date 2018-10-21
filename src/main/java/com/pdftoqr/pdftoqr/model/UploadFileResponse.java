@@ -4,20 +4,20 @@ package com.pdftoqr.pdftoqr.model;
 public class UploadFileResponse {
     public UploadFileResponse() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	private String fileName;
     private String fileDownloadUri;
-    private String fileType;
-    private long size;
 
     public UploadFileResponse(String fileName, String fileDownloadUri, String fileType, long size) {
         this.setFileName(fileName);
         this.setFileDownloadUri(fileDownloadUri);
-        this.setFileType(fileType);
-        this.setSize(size);
     }
+
+	@Override
+	public String toString() {
+		return "UploadFileResponse [fileName=" + fileName + ", fileDownloadUri=" + fileDownloadUri + "]";
+	}
 
 	public String getFileName() {
 		return fileName;
@@ -35,26 +35,6 @@ public class UploadFileResponse {
 		this.fileDownloadUri = fileDownloadUri;
 	}
 
-	public String getFileType() {
-		return fileType;
-	}
 
-	public void setFileType(String fileType) {
-		this.fileType = fileType;
-	}
-
-	public long getSize() {
-		return size;
-	}
-
-	public void setSize(long size) {
-		this.size = size;
-	}
-
-	@Override
-	public String toString() {
-		return "UploadFileResponse [fileName=" + fileName + ", fileDownloadUri=" + fileDownloadUri + ", fileType="
-				+ fileType + ", size=" + size + "]";
-	}
 
 }
