@@ -34,11 +34,8 @@
     	<script type="text/javascript" src="../assets/js/core/cr_fileinput.min.js"></script>
     	<script type="text/javascript" src="../assets/js/core/app.js"></script>
     	<script type="text/javascript" src="../assets/js/pages/uploader_bootstrap.js"></script>
-    		<!-- Header JS files -->
-    		
-    	<script type="text/javascript" src="../assets/js/core/cr.js"></script><script type="text/javascript" src="../assets/js/plugins/loaders/pace.min.js"></script><script type="text/javascript" src="../assets/js/plugins/loaders/blockui.min.js"></script><script type="text/javascript" src="../assets/js/plugins/ui/nicescroll.min.js"></script><script type="text/javascript" src="../assets/js/plugins/ui/drilldown.js"></script><script type="text/javascript" src="../assets/js/plugins/visualization/d3/d3.min.js"></script><script type="text/javascript" src="../assets/js/plugins/visualization/d3/d3_tooltip.js"></script><script type="text/javascript" src="../assets/js/plugins/forms/styling/switchery.min.js"></script><script type="text/javascript" src="../assets/js/plugins/forms/styling/uniform.min.js"></script><script type="text/javascript" src="../assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script><script type="text/javascript" src="../assets/js/plugins/ui/moment/moment.min.js"></script><script type="text/javascript" src="../assets/js/plugins/pickers/daterangepicker.js"></script><script type="text/javascript" src="../assets/js/plugins/notifications/bootbox.min.js"></script><script type="text/javascript" src="../assets/js/plugins/notifications/sweet_alert.min.js"></script><script type="text/javascript" src="../assets/js/core/app.js"></script><script type="text/javascript" src="../assets/js/pages/components_modals.js"></script>
-	<!-- Header JS files -->
-	<!-- Header JS files -->
+		<script type="text/javascript" src="../assets/js/core/cr.js"></script><script type="text/javascript" src="../assets/js/plugins/loaders/pace.min.js"></script><script type="text/javascript" src="../assets/js/plugins/loaders/blockui.min.js"></script><script type="text/javascript" src="../assets/js/plugins/ui/nicescroll.min.js"></script><script type="text/javascript" src="../assets/js/plugins/ui/drilldown.js"></script><script type="text/javascript" src="../assets/js/plugins/visualization/d3/d3.min.js"></script><script type="text/javascript" src="../assets/js/plugins/visualization/d3/d3_tooltip.js"></script><script type="text/javascript" src="../assets/js/plugins/forms/styling/switchery.min.js"></script><script type="text/javascript" src="../assets/js/plugins/forms/styling/uniform.min.js"></script><script type="text/javascript" src="../assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script><script type="text/javascript" src="../assets/js/plugins/ui/moment/moment.min.js"></script><script type="text/javascript" src="../assets/js/plugins/pickers/daterangepicker.js"></script><script type="text/javascript" src="../assets/js/plugins/notifications/bootbox.min.js"></script><script type="text/javascript" src="../assets/js/plugins/notifications/sweet_alert.min.js"></script><script type="text/javascript" src="../assets/js/core/app.js"></script><script type="text/javascript" src="../assets/js/pages/components_modals.js"></script>
+
 </head>
 
 <body onload="active_menu_item('extensiones', 'subir_archivos')">
@@ -60,19 +57,19 @@
     position: absolute;
     top:0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
+}
+.bg-primary{
+background-color: #CB0017 !important;
 }
 </style>
-<div class="container">
-	
-<div class="navbar navbar-inverse">
-		<!-- container Main Navbar-->
-		<div class="container">
+	<div class="row  bg-primary">
+		<div class="container ">
 			<div class="navbar-header">
-				<a class="navbar-brand logo_desktop" href="../prueba"><img src="../assets/img/gif1.gif" alt=""></a>
+				<a class="navbar-brand logo_desktop" href="../pdftoqr"><img src="../assets/img/gif1.gif" alt=""></a>
 				<!-- logo para version movil -->
-				<a class="navbar-brand logo_mobile" href="../prueba"><img src="../assets/img/gif1.gif" alt=""></a>
+				<a class="navbar-brand logo_mobile" href="../pdftoqr"><img src="../assets/img/gif1.gif" alt=""></a>
 				<span class="title_mobile">PDF to QR </span>
 				
 			</div>
@@ -84,7 +81,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- / container Main Navbar-->
+		
 	</div>
 
 	<!-- Page container -->
@@ -156,7 +153,7 @@
     									<p class="text-muted"><h2><code>PDFtoQR</code> como herramienta de conversi&oacute;n de documentos PDF con videos  a  documentos PDF con codigos QR  </h2>
     									Es una aplicaci&oacute;n web cuya funci&oacute;n es la de transformar un pdf con contenido multimedia en un PDF con codigos QR que reemplazan los elementos multimedia para que asi al
     									 ser impresos no se pierda accesibilidad a ellos.<br>
-    									 Esta aplicaci&oacute;n se desarrollo como objetivo en el Trabajo de Fin de Grado del <code> Grado en Ingenier&iacute;a Inform&aacute;tica de la Universidad Rey Juan Carlos</code> siendo el tutor y creador de la idea el profesor <b>Jaime Urquiza</b> </p>
+    									 Esta aplicaci&oacute;n se desarrollo como objetivo en el Trabajo de Fin de Grado del <code> Grado en Ingenier&iacute;a Inform&aacute;tica de la Universidad Rey Juan Carlos</code> siendo el tutor y creador de la idea el profesor <b>Jaime Urquiza Fuentes</b>&nbsp;(<a href="mailto:jaime.urquiza@urjc.es">jaime.urquiza@urjc.es</a>) y la desarrolladora la alumna <b>Rosario del Pilar Orbezo Pastrana</b>&nbsp;(<a href="mailto:rp.orbezo@alumnos.urjc.es">rp.orbezo@alumnos.urjc.es</a>)</p>
     									 <br>
     									 
     									</div>
@@ -167,21 +164,24 @@
 								
 							</div>
 						</div>
-							<footer>
-		<div class="text-center">
-			&copy;Realizado por Rosario del Pilar Orbezo Pastrana.
-		</div>
-	</footer>
+
 
 			</div>
 			<!-- /main content -->
 
 		</div>
+			<div class="row bg-primary">
+		<footer>
+			<div class="text-center">
+						
+			</div>
+	</footer>
+	</div>
 		<!-- /page content -->
 
 	</div>
-	
-</div>	
+
+
 	
 	
 	
@@ -200,7 +200,7 @@
             <div class="modal-body">
                 <div class="alert alert-danger alert-styled-left text-blue-800 content-group">
                     <span class="text-semibold">Importante!</span> El proceso no puede continuar debido a que los siguientes videos no tienen Url.
-                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <button type="button" class="close" data-dismiss="alert">Ã—</button>
                 </div>
 
                 <h6 class="text-semibold"><i class="icon-law position-left"></i> Por favor, introduzca las Url's para poder continuar</h6>
@@ -337,9 +337,7 @@ $(".fileinput-remove").click(function(){
 	$("#errorsinmultimedia").css("display", "none");	
 });
 $("#form1").on("submit", function(e){
-	   //Code: Action (like ajax...)
-	   e.preventDefault();
-	 
+	   e.preventDefault();	 
 	  var oMyForm = new FormData();
 	  oMyForm.append("file", file.files[0]);
 	  oMyForm.append("info","");
@@ -365,10 +363,7 @@ $("#form1").on("submit", function(e){
 	       				
 	       			}
 					else{
-	       				
-	       			
-	       			
-	       				
+
 			       				$('#form2').empty();
 			       				var form2=$("#form2");
 			       				var cont=0;
